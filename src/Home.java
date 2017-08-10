@@ -21,6 +21,11 @@ class Home{
         this.description = freeDes;
 
 
+
+    }
+    public List<Component> getIntoComponent(){
+        return component;
+
     }
     public void addComponent(Component componentObj){
         component.add(componentObj);
@@ -39,6 +44,12 @@ class Home{
 
     public static void main(String[] args) {
         Home home1 = new Home("This home is located near the narrow sea");
+        home1.addComponent(new Component());
+
+        home1.getIntoComponent().get(0).addThings("LOVE");
+
+        System.out.println(home1.getIntoComponent().get(0).printThing());
+
 
 
         System.out.println(home1.toString());
